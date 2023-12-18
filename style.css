@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+--Paleblue: hsl(225, 100%, 94%);
+--Brightblue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+--Verypaleblue: hsl(225, 100%, 98%);
+--Desaturatedblue: hsl(224, 23%, 55%);
+--Darkblue: hsl(223, 47%, 23%);
+--Softlavender: #756CF3;
+
+    /* Font */
+--RedHatDisplay: 'Red Hat Display', sans-serif;
+--medium: 500;
+--bold: 700;
+--thick: 900;
+}
+
+img * {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--RedHatDisplay);
+    font-size: 16px;
+    background: url(./images/pattern-background-mobile.svg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-color: var(--Paleblue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    border-radius: 1em;
+}
+
+.hero img{
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+.hero-content {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.title, .text {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.title {
+    color: var(--Darkblue);
+    font-weight: var(--thick);
+}
+
+.text, .subscription-plan p, .cancel-btn {
+    color: var(--Desaturatedblue);
+    font-weight: var(--medium);
+}
+
+.subscription-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    width: 100%;
+    background-color: var(--Verypaleblue);
+    padding: 1em 1.1em;
+    border-radius: .7em;
+}
+
+.subscription-plan {
+    margin-left: -2.5em;
+    font-size: 1rem;
+}
+
+.subscription-plan span {
+    color: var(--Darkblue);
+    font-weight: var(--thick);
+}
+
+.change-subscription {
+    font-size: .95rem;
+    color: var(--Brightblue);
+    font-weight: var(--thick);
+}
+
+button {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 1.1em;
+    border-radius: .7em;
+    border: none;
+    font-family: var(--RedHatDisplay);
+    font-size: 1.1rem;
+}
+
+.proceed-btn {
+    background-color: var(--Brightblue);
+    color: white;
+    font-weight: var(--bold);
+    box-shadow:  0 12px 5px 10px var(--Verypaleblue);
+    z-index: 1;
+}
+
+.cancel-btn {
+    background-color: white;
+    font-weight: var(--thick);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+        /* ACTIVE STATES DESIGN */
+.change-subscription:hover {
+    text-decoration: none;
+    color: var(--Softlavender);
+}
+
+.proceed-btn:hover {
+    background-color: var(--Softlavender);
+}
+
+.cancel-btn:hover {
+    color: var(--Darkblue);
+}
+
+        /* MEDIA QUERY DESIGN*/
+@media screen and (min-width: 900px) {
+    body {
+        background: url('./images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-color: var(--Paleblue);
+    }
+
+    .container {
+        width: 28%;
+        min-width: 403.2px;
+        max-width: 403.2px;
+    }
+
+    .hero-content {
+        padding: 2em 3em;
+        gap: .5em;
+    }
+
+
+    .subscription-box {
+        padding: 1.4em 1.1em;
+    }
+
+    .subscription-plan {
+        margin-left: -3.5em;
+        font-size: 1.1rem
+    }
+
+    button {
+        padding: .8em;
+    }
+}
